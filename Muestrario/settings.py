@@ -27,7 +27,7 @@ SECRET_KEY = config('SECRET_KEY', default='django-insecure-#6*d*9c5fe1&qj4lz*2vw
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=True, cast=bool)
 
-ALLOWED_HOSTS = ['proyecyosok-production.up.railway.app', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['muestrario-production.up.railway.app', 'proyecyosok-production.up.railway.app', 'localhost', '127.0.0.1']
 
 
 
@@ -149,7 +149,7 @@ if not DEBUG:
 
 CSRF_TRUSTED_ORIGINS = config(
     'CSRF_TRUSTED_ORIGINS',
-    default='http://localhost:8000,http://127.0.0.1:8000',
+    default='http://localhost:8000,http://127.0.0.1:8000,https://muestrario-production.up.railway.app',
     cast=lambda v: [s.strip() for s in v.split(',')]
 )
 
