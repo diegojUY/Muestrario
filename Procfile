@@ -1,1 +1,2 @@
-web: gunicorn Muestrario.wsgi --log-file -
+web: gunicorn prueba.wsgi
+release: python manage.py migrate
